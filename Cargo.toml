@@ -3,10 +3,14 @@ name = "blog_os"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
-
 [profile.dev]
 panic = "abort"
 
 [profile.release]
 panic = "abort"
+
+[unstable]
+build-std = ["core", "compiler_builtins"]
+
+[dependencies]
+bootloader = "0.9"
